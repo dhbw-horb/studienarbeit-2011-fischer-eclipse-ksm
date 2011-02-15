@@ -1,0 +1,73 @@
+<class-diagram version="1.0.1" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" 
+    name="de.dhbw.horb.ksm.core.extension.AbstractPropertyDescriptorAdvisor" project="de.dhbw.horb.ksm.core" 
+    file="/de.dhbw.horb.ksm.core/src/de/dhbw/horb/ksm/core/extension/AbstractPropertyDescriptorAdvisor.java" 
+    binary="false">    
+    <position x="209" y="344" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="4" corner="BOTTOM_RIGHT" language="java" 
+    name="de.dhbw.horb.ksm.core.editor.model.property.BaseNodeGroupPropertyAdvisor" project="de.dhbw.horb.ksm.core" 
+    file="/de.dhbw.horb.ksm.core/src/de/dhbw/horb/ksm/core/editor/model/property/BaseNodeGroupPropertyAdvisor.java" 
+    binary="false">    
+    <position x="332" y="487" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" 
+    name="de.dhbw.horb.ksm.core.editor.model.property.BaseNodePropertyAdvisor" project="de.dhbw.horb.ksm.core" 
+    file="/de.dhbw.horb.ksm.core/src/de/dhbw/horb/ksm/core/editor/model/property/BaseNodePropertyAdvisor.java" 
+    binary="false">    
+    <position x="108" y="483" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" 
+    name="de.dhbw.horb.ksm.core.editor.model.property.ModelPropertySource" project="de.dhbw.horb.ksm.core" 
+    file="/de.dhbw.horb.ksm.core/src/de/dhbw/horb/ksm/core/editor/model/property/ModelPropertySource.java" 
+    binary="false">    
+    <position x="213" y="153" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="10" corner="BOTTOM_RIGHT" language="java" name="org.eclipse.ui.views.properties.IPropertySource" 
+    project="de.dhbw.horb.ksm.core" 
+    file="/mnt/btrfs/stuff/eclipse/plugins/org.eclipse.ui.views_3.5.1.M20110202-0800.jar" binary="true">    
+    <position x="214" y="10" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </interface>  
+  <generalization>    
+    <end type="SOURCE" nodeId="5"/>    
+    <end type="TARGET" nodeId="1"/>  
+  </generalization>  
+  <dependency>    
+    <end type="SOURCE" nodeId="8"/>    
+    <end type="TARGET" nodeId="1"/>  
+  </dependency>  
+  <generalization>    
+    <end type="SOURCE" nodeId="4"/>    
+    <end type="TARGET" nodeId="1"/>  
+  </generalization>  
+  <realization>    
+    <end type="SOURCE" nodeId="8"/>    
+    <end type="TARGET" nodeId="10"/>  
+  </realization>  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

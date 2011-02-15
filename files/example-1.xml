@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ksm xmlns="http://hb.dhbw-stuttgart.de/~ksm/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hb.dhbw-stuttgart.de/~ksm/1.0 ksm-1.0.xsd"
+  version="1.0">
+  <nodegroup id="root">
+    <node id="56-7567-567567-657657-567">
+      <properties>
+        <string name="visual.caption">a node</string>
+        <string name="visual.color">#ffeecc</string>
+        <integer name="visual.pos_x">420</integer>
+        <integer name="visual.pos_y">420</integer>
+      </properties>
+      <connections />
+    </node>
+
+    <nodegroup id="0123123-123123-123123-123213">
+      <node id="56-7567-12345-657657-567">
+        <properties>
+          <string name="visual.color">#ffeecc</string>
+          <integer name="visual.pos_x">420</integer>
+          <integer name="visual.pos_y">420</integer>
+        </properties>
+        <connections>
+          <connection to="56-7567-567567-657657-567">
+            <properties>
+              <string name="visual.caption">A Connection</string>
+              <string name="visual.color">#ffeecc</string>
+              <integer name="data.weight">5</integer>
+            </properties>
+          </connection>
+        </connections>
+      </node>
+      <properties>
+        <string name="visual.caption">a Hierarchy</string>
+        <string name="visual.color">#ffeecc</string>
+        <integer name="visual.pos_x">420</integer>
+        <integer name="visual.pos_y">420</integer>
+      </properties>
+    </nodegroup>
+    <properties />
+  </nodegroup>
+</ksm>

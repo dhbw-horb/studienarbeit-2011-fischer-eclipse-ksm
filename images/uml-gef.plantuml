@@ -1,0 +1,26 @@
+@startuml img/classes01.png
+
+package "Model" #dddddd {
+	Element <-- Connection
+	Element <- Node
+	Element <- NodeProperties
+	Element <- Diagram 
+	Node *-- NodeProperties
+	Diagram *-- Node
+	Diagram *-- Connection
+}
+DiagramEditor o-- "1" Diagram
+DiagramEditor *-- PartFactory
+
+package "Controller" #DDDDDD {
+	PartFactory o-- ConnectionEditPart
+	PartFactory o-- KSMNodeEditPart 
+}
+PartFactory:createEditPart(context, model)
+
+package "View" #dddddd {
+	KSMNodeEditPart *-- KSMNodeFigure
+	ConnectionEditPart *-- RoundedPolygone
+}
+
+@enduml

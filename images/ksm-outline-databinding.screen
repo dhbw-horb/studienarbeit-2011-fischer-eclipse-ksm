@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Tree" x="314" y="53" width="201" height="194" text="KSM Knoten 1&#xA;- KSM Knoten 2&#xA;KSM Knoten 2&#xA;-KSM Knoten 1" measuredWidth="201" measuredHeight="194" verticalScrollbar="true" selection="0">
+    <items x="0" y="5" width="184" height="23" text="KSM Knoten 1"/>
+    <items x="0" y="28" width="184" height="23" text="- KSM Knoten 2"/>
+    <items x="0" y="51" width="184" height="23" text="KSM Knoten 2"/>
+    <items x="0" y="74" width="184" height="23" text="-KSM Knoten 1"/>
+  </widgets>
+  <widgets xsi:type="model:Panel" x="23" y="52" width="260" height="406" measuredWidth="260" measuredHeight="406" verticalScrollbar="true"/>
+  <widgets xsi:type="model:Tabs" x="16" y="24" text="Sample KSM Model.ksm" measuredWidth="176" measuredHeight="30" selection="0">
+    <items x="1" y="0" width="174" height="30" text="Sample KSM Model.ksm"/>
+  </widgets>
+  <widgets xsi:type="model:Tabs" x="314" y="18" text="Outline" measuredWidth="67" measuredHeight="30" selection="0">
+    <items x="1" y="0" width="65" height="30" text="Outline"/>
+  </widgets>
+  <widgets xsi:type="model:VLine" x="298" y="10" height="445" measuredWidth="6" measuredHeight="445"/>
+  <widgets xsi:type="model:ButtonBar" x="314" y="277" text="Add,Delete" measuredWidth="109" measuredHeight="30" selection="">
+    <font/>
+    <items x="0" y="0" width="46" height="30" text="Add"/>
+    <items x="46" y="0" width="63" height="30" text="Delete"/>
+  </widgets>
+  <widgets xsi:type="model:Table" x="314" y="319" width="201" height="120" text="Name,Value&#xA;Property 1,Value 1&#xA;Property 2,Value 2&#xA;Property 3,Value 3" measuredWidth="201" measuredHeight="120" verticalScrollbar="true">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Rectangle" x="56" y="234" width="136" height="49" text="KSM Knoten 1" measuredWidth="136" measuredHeight="49" border="dashed-rounded">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Arrow" x="117" y="145" width="83" height="90" measuredWidth="83" measuredHeight="90" left="false" right="true" direction="bottom"/>
+  <widgets xsi:type="model:Rectangle" x="125" y="97" width="136" height="49" text="KSM Knoten 2" measuredWidth="136" measuredHeight="49">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Arrow" x="190" y="71" width="138" height="164" measuredWidth="138" measuredHeight="164" foreground="#ff0000" right="true" direction="bottom"/>
+  <widgets xsi:type="model:Arrow" x="260" y="103" width="67" height="24" measuredWidth="67" measuredHeight="24" foreground="#ff0000" right="true"/>
+  <widgets xsi:type="model:Arrow" x="440" y="62" width="105" height="290" measuredWidth="105" measuredHeight="290" foreground="#0000ff" left="false" right="true"/>
+  <widgets xsi:type="model:Label" x="191" y="12" text="Selektions\nSynchronisation" measuredWidth="107" measuredHeight="42" foreground="#ff0000">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" x="392" y="176" text="Master-Detail\nBeziehung" measuredWidth="90" measuredHeight="42" foreground="#0000ff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:CurlyBrace" x="514" y="304" width="23" height="149" measuredWidth="23" measuredHeight="149">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Circle" x="432" y="61" width="20" height="19" measuredWidth="20" measuredHeight="19" background="#0000ff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:HSplitter" x="314" y="253" width="201" measuredWidth="201" measuredHeight="11"/>
+  <hRuler/>
+  <vRuler/>
+  <font/>
+</model:Screen>

@@ -1,0 +1,60 @@
+<class-diagram version="1.0.1" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <interface id="1" corner="BOTTOM_RIGHT" language="java" name="de.dhbw.horb.ksm.xmlschema.api.KSM" 
+    project="de.dhbw.horb.ksm.xmlschema" file="/de.dhbw.horb.ksm.xmlschema/src/de/dhbw/horb/ksm/xmlschema/api/KSM.java" 
+    binary="false">    
+    <position x="412" y="93" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="de.dhbw.horb.ksm.xmlschema.impl.KSMImpl" 
+    project="de.dhbw.horb.ksm.xmlschema" 
+    file="/de.dhbw.horb.ksm.xmlschema/src/de/dhbw/horb/ksm/xmlschema/impl/KSMImpl.java" binary="false">    
+    <position x="415" y="319" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="de.dhbw.horb.ksm.xmlschema.generated.XKSM" 
+    project="de.dhbw.horb.ksm.xmlschema" 
+    file="/de.dhbw.horb.ksm.xmlschema/src/de/dhbw/horb/ksm/xmlschema/generated/XKSM.java" binary="false">    
+    <position x="147" y="335" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" name="de.dhbw.horb.ksm.xmlschema.impl.KSMFactory" 
+    project="de.dhbw.horb.ksm.xmlschema" 
+    file="/de.dhbw.horb.ksm.xmlschema/src/de/dhbw/horb/ksm/xmlschema/impl/KSMFactory.java" binary="false">    
+    <position x="117" y="94" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <dependency>    
+    <end type="SOURCE" nodeId="6"/>    
+    <end type="TARGET" nodeId="2"/>  
+  </dependency>  
+  <association>    
+    <end type="SOURCE" nodeId="2" navigable="false">      
+      <attribute name="xksm"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" nodeId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization>    
+    <end type="SOURCE" nodeId="2"/>    
+    <end type="TARGET" nodeId="1"/>  
+  </realization>  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

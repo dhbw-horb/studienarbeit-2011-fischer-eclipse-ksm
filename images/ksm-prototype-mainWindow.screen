@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Window" x="-2" y="24" width="1035" height="673" text="KSM RCP" measuredWidth="1035" measuredHeight="673"/>
+  <widgets xsi:type="model:Menu" x="-2" y="43" text="File,Edit,Perspective,Help" measuredWidth="197" measuredHeight="30">
+    <items x="5" y="0" width="30" height="30" text="File"/>
+    <items x="35" y="0" width="34" height="30" text="Edit"/>
+    <items x="69" y="0" width="84" height="30" text="Perspective"/>
+    <items x="153" y="0" width="39" height="30" text="Help"/>
+  </widgets>
+  <widgets xsi:type="model:Icon" x="8" y="76" measuredWidth="16" measuredHeight="16" icon="add (small)"/>
+  <widgets xsi:type="model:Icon" x="34" y="76" measuredWidth="16" measuredHeight="16" icon="save (small)"/>
+  <widgets xsi:type="model:VLine" x="56" y="71" height="26" measuredWidth="6" measuredHeight="26"/>
+  <widgets xsi:type="model:Icon" x="64" y="76" measuredWidth="16" measuredHeight="16" icon="submenu (small)"/>
+  <widgets xsi:type="model:Tree" x="17" y="161" width="268" height="520" text="KSM Project&#xA;-Sample KSM Model.ksm&#xA;Other KSM Project" measuredWidth="268" measuredHeight="520" verticalScrollbar="true" selection="1">
+    <items x="0" y="5" width="251" height="23" text="KSM Project"/>
+    <items x="0" y="28" width="251" height="23" text="-Sample KSM Model.ksm"/>
+    <items x="0" y="51" width="251" height="23" text="Other KSM Project"/>
+  </widgets>
+  <widgets xsi:type="model:Tree" x="824" y="138" width="201" height="194" text="KSM Knoten 1&#xA;- KSM Knoten 2&#xA;KSM Knoten 2&#xA;-KSM Knoten 1" measuredWidth="201" measuredHeight="194" verticalScrollbar="true">
+    <items x="0" y="5" width="184" height="23" text="KSM Knoten 1"/>
+    <items x="0" y="28" width="184" height="23" text="- KSM Knoten 2"/>
+    <items x="0" y="51" width="184" height="23" text="KSM Knoten 2"/>
+    <items x="0" y="74" width="184" height="23" text="-KSM Knoten 1"/>
+  </widgets>
+  <widgets xsi:type="model:Panel" x="432" y="137" width="361" height="406" measuredWidth="361" measuredHeight="406" verticalScrollbar="true"/>
+  <widgets xsi:type="model:Tabs" x="294" y="108" text="Sample KSM Model.ksm" measuredWidth="176" measuredHeight="30" selection="0">
+    <items x="1" y="0" width="174" height="30" text="Sample KSM Model.ksm"/>
+  </widgets>
+  <widgets xsi:type="model:Tabs" x="291" y="565" text="Simulation Output, Other Stuff" measuredWidth="228" measuredHeight="30" selection="4">
+    <items x="1" y="0" width="136" height="30" text="Simulation Output"/>
+    <items x="137" y="0" width="90" height="30" text="Other Stuff"/>
+  </widgets>
+  <widgets xsi:type="model:HLine" x="291" y="552" width="742" measuredWidth="742" measuredHeight="6"/>
+  <widgets xsi:type="model:Tabs" x="17" y="108" text="Project Explorer" measuredWidth="122" measuredHeight="30" selection="0">
+    <items x="1" y="0" width="120" height="30" text="Project Explorer"/>
+  </widgets>
+  <widgets xsi:type="model:VLine" x="288" y="103" height="578" measuredWidth="6" measuredHeight="578"/>
+  <widgets xsi:type="model:Tabs" x="824" y="103" text="Outline" measuredWidth="67" measuredHeight="30" selection="0">
+    <items x="1" y="0" width="65" height="30" text="Outline"/>
+  </widgets>
+  <widgets xsi:type="model:VLine" x="808" y="95" height="445" measuredWidth="6" measuredHeight="445"/>
+  <widgets xsi:type="model:Tree" x="294" y="161" width="123" height="384" text="Node&#xA;Connection" measuredWidth="123" measuredHeight="384" verticalScrollbar="true">
+    <items x="0" y="5" width="106" height="23" text="Node"/>
+    <items x="0" y="28" width="106" height="23" text="Connection"/>
+  </widgets>
+  <widgets xsi:type="model:Label" x="294" y="143" text="Palette" measuredWidth="49" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:ButtonBar" x="824" y="362" text="Add,Delete" measuredWidth="109" measuredHeight="30" selection="">
+    <font/>
+    <items x="0" y="0" width="46" height="30" text="Add"/>
+    <items x="46" y="0" width="63" height="30" text="Delete"/>
+  </widgets>
+  <widgets xsi:type="model:HLine" x="824" y="341" width="201" measuredWidth="201" measuredHeight="6"/>
+  <widgets xsi:type="model:Table" x="824" y="404" width="201" height="120" text="Name,Value&#xA;Property 1,Value 1&#xA;Property 2,Value 2&#xA;Property 3,Value 3" measuredWidth="201" measuredHeight="120" verticalScrollbar="true">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Callout" x="448" y="95" text="1" measuredWidth="27" measuredHeight="27" background="#00adef">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Callout" x="952" y="363" text="2" measuredWidth="27" measuredHeight="27" background="#00adef">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Rectangle" x="442" y="200" width="136" height="49" text="KSM Knoten 1" measuredWidth="136" measuredHeight="49">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Rectangle" x="624" y="200" width="136" height="49" text="KSM Knoten 2" measuredWidth="136" measuredHeight="49">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:HLine" x="577" y="232" width="48" measuredWidth="48" measuredHeight="6"/>
+  <widgets xsi:type="model:Callout" x="383" y="620" text="3" measuredWidth="27" measuredHeight="27" background="#00adef">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Callout" x="96" y="65" text="4" measuredWidth="27" measuredHeight="27" background="#00adef">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Rectangle" x="294" y="598" width="723" height="83" measuredWidth="723" measuredHeight="83">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Chart" x="496" y="603" width="151" height="73" measuredWidth="151" measuredHeight="73" chartType="column"/>
+  <widgets xsi:type="model:Chart" x="312" y="602" width="177" height="74" measuredWidth="177" measuredHeight="74" chartType="line"/>
+  <widgets xsi:type="model:Chart" x="646" y="603" width="151" height="72" measuredWidth="151" measuredHeight="72" chartType="column"/>
+  <widgets xsi:type="model:Table" x="800" y="603" width="216" height="71" text="Name,Name,Age v,Kids,Likes,Actions&#xA;Peter,Severin,33,[x],{computer},[Edit] [View]&#xA;Cristina,Severin,33,[x],{shopping-cart},[Edit] [View]&#xA;Henri,Severin,2,[],{note},[Edit] [View]" measuredWidth="216" measuredHeight="71" rowHeight="20">
+    <font size="8"/>
+  </widgets>
+  <hRuler/>
+  <vRuler>
+    <guides position="108"/>
+  </vRuler>
+  <font/>
+</model:Screen>

@@ -1,0 +1,96 @@
+<class-diagram version="1.0.1" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="de.dhbw.horb.ksm.core.editor.figures.KSMNodeFigure" 
+    project="de.dhbw.horb.ksm.core" 
+    file="/de.dhbw.horb.ksm.core/src/de/dhbw/horb/ksm/core/editor/figures/KSMNodeFigure.java" binary="false">    
+    <position x="524" y="64" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" name="de.dhbw.horb.ksm.core.editor.parts.PartFactory" 
+    project="de.dhbw.horb.ksm.core" 
+    file="/de.dhbw.horb.ksm.core/src/de/dhbw/horb/ksm/core/editor/parts/PartFactory.java" binary="false">    
+    <position x="527" y="530" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="de.dhbw.horb.ksm.core.editor.parts.KSMNodeEditPart" 
+    project="de.dhbw.horb.ksm.core" 
+    file="/de.dhbw.horb.ksm.core/src/de/dhbw/horb/ksm/core/editor/parts/KSMNodeEditPart.java" binary="false">    
+    <position x="523" y="277" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="16" corner="BOTTOM_RIGHT" language="java" name="de.dhbw.horb.ksm.xmlschema.api.Node" 
+    project="ksm-datamodel" file="/ksm-datamodel/src/de/dhbw/horb/ksm/xmlschema/api/Node.java" binary="false">    
+    <position x="166" y="156" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="17" corner="BOTTOM_RIGHT" language="java" 
+    name="de.dhbw.horb.ksm.core.editor.parts.editmanager.NodeDirectEditManager" project="de.dhbw.horb.ksm.core" 
+    file="/de.dhbw.horb.ksm.core/src/de/dhbw/horb/ksm/core/editor/parts/editmanager/NodeDirectEditManager.java" 
+    binary="false">    
+    <position x="898" y="140" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="18" corner="BOTTOM_RIGHT" language="java" 
+    name="de.dhbw.horb.ksm.core.editor.policies.NodeComponentEditPolicy" project="de.dhbw.horb.ksm.core" 
+    file="/de.dhbw.horb.ksm.core/src/de/dhbw/horb/ksm/core/editor/policies/NodeComponentEditPolicy.java" binary="false">    
+    <position x="900" y="36" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="19" corner="BOTTOM_RIGHT" language="java" 
+    name="de.dhbw.horb.ksm.core.editor.policies.NodeGraphicalNodeEditPolicy" project="de.dhbw.horb.ksm.core" 
+    file="/de.dhbw.horb.ksm.core/src/de/dhbw/horb/ksm/core/editor/policies/NodeGraphicalNodeEditPolicy.java" 
+    binary="false">    
+    <position x="915" y="269" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <dependency>    
+    <end type="SOURCE" nodeId="11"/>    
+    <end type="TARGET" nodeId="18"/>  
+  </dependency>  
+  <dependency>    
+    <end type="SOURCE" nodeId="11"/>    
+    <end type="TARGET" nodeId="1"/>  
+  </dependency>  
+  <dependency>    
+    <end type="SOURCE" nodeId="19"/>    
+    <end type="TARGET" nodeId="11"/>  
+  </dependency>  
+  <dependency>    
+    <end type="SOURCE" nodeId="8"/>    
+    <end type="TARGET" nodeId="11"/>  
+  </dependency>  
+  <association>    
+    <end type="SOURCE" nodeId="11" navigable="false">      
+      <attribute name="manager"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" nodeId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
