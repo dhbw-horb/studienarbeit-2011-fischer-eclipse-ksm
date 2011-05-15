@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ksm xmlns="http://hb.dhbw-stuttgart.de/~ksm/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://hb.dhbw-stuttgart.de/~ksm/1.0 ksm-1.0.xsd"
+<ksm xmlns="http://www.ba-horb.de/~ksm/xml/ksm-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.ba-horb.de/~ksm/xml/ksm-1 ksm-1.xsd"
   version="1.0">
   <nodegroup id="root">
     <node id="56-7567-567567-657657-567">
       <properties>
         <string name="visual.caption">a node</string>
         <string name="visual.color">#ffeecc</string>
-        <integer name="visual.pos_x">420</integer>
-        <integer name="visual.pos_y">420</integer>
+        <decimal name="visual.location.x">420</decimal>
+        <decimal name="visual.location.y">420</decimal>
+        <stringList name="meineTolleList">
+          <value>TestValue</value>
+        </stringList>
+        <decimalList name="nochEine">
+          <value>1.2</value>
+        </decimalList>
       </properties>
       <connections />
     </node>
+
 
     <nodegroup id="0123123-123123-123123-123213">
       <node id="56-7567-12345-657657-567">
         <properties>
           <string name="visual.color">#ffeecc</string>
-          <integer name="visual.pos_x">420</integer>
-          <integer name="visual.pos_y">420</integer>
+          <decimal name="visual.location.x">420</decimal>
+          <decimal name="visual.location.y">420</decimal>
         </properties>
         <connections>
           <connection to="56-7567-567567-657657-567">
             <properties>
               <string name="visual.caption">A Connection</string>
               <string name="visual.color">#ffeecc</string>
-              <integer name="data.weight">5</integer>
+              <decimal name="data.weight">5</decimal>
             </properties>
           </connection>
         </connections>
@@ -33,8 +40,8 @@
       <properties>
         <string name="visual.caption">a Hierarchy</string>
         <string name="visual.color">#ffeecc</string>
-        <integer name="visual.pos_x">420</integer>
-        <integer name="visual.pos_y">420</integer>
+        <decimal name="visual.location.x">420</decimal>
+        <decimal name="visual.location.y">420</decimal>
       </properties>
     </nodegroup>
     <properties />
