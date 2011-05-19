@@ -1,7 +1,7 @@
 % !TEX TS-program = pdflatex -shell-escape
 % !TEX encoding = UTF-8 Unicode
 \documentclass[%draft,
-12pt,titlepage,abstracton,DIV=10]{scrreprt}
+12pt,titlepage,abstracton,DIV=10,BCOR=0.5cm]{scrreprt}
 \usepackage[T1]{fontenc}
 \usepackage{ucs}
 \usepackage[utf8x]{inputenc}
@@ -221,10 +221,10 @@ auszuliefern.
 aus der Eclipse Plattform kann auf aufwendige, fehleranfällige
 Eigenentwicklungen verzichtet werden.
 
-\textbf{Bessere GUI\ } Für Benutzer von Eclipse wird das Arbeiten mit
-Workspaces und Projekten in der Eclipse~Art bereits vertraut sein. Alle anderen
-werden mit einem intuitiven Standard- --- weniger individuell-kreativen ---
-Oberfläche konfrontiert.
+\textbf{Bessere GUI\ } Für Benutzer von Eclipse wird das Arbeiten mit Workspaces
+und Projekten beim Umgang mit KSM bereits vertraut sein. Alle anderen werden mit
+einer intuitiven, Standard- --- weniger individuell-kreativen --- Oberfläche
+konfrontiert.
 
 \textbf{Lizenzmanagement\ } KSM soll in naher Zukunft öffentlich verfügbar
 sein, QKSM nicht. Wäre QKSM ein Zusatzmodul (Bundle, Plugin) für KSM, dann
@@ -267,7 +267,7 @@ In der Studienarbeit 1 wurde mit einem vereinfachten Datenmodell gearbeitet.
 
 Da zukünftig sowohl KSM/Swing als auch /RCP die gleichen Daten verarbeiten
 können sollten, liegt es nahe, dass das Format in dem die Daten persistent im
-Dateisystem abgelegt sind vereinheitlicht werden sollte.
+Dateisystem abgelegt sind, vereinheitlicht werden sollte.
 
 Im folgenden wird ausgeführt warum das aktuelle Datenformat in KSM/Swing nicht
 geeignet ist und wie ein neues entwickelt wurde.
@@ -276,7 +276,7 @@ geeignet ist und wie ein neues entwickelt wurde.
 \begingroup
 \leftskip=1.5cm % ggf. verstellen
 \noindent In Anhang \ref{chapter:doku-datamodel} ist die vollständige Dokumentation des
-neuen Datenformat zu finden dessen Entwicklung in diesem Kapitel beschrieben
+neuen Datenformat zu finden, dessen Entwicklung in diesem Kapitel beschrieben
 wird.
 \par
 \endgroup
@@ -306,7 +306,7 @@ Model-Objekte einfach mittels leicht annotierten JAXB serialisiert wurden
         <id>e36a0368-d8f6-40a2-bd29-375352045da8</id>
         <location>
               <x>531</x>
-             <y>104</y>
+              <y>104</y>
         </location>
         <nodeProperties/>
     </nodes>
@@ -333,7 +333,7 @@ Speicherung erzeugte XML wieder.
 	caption={Datenformat aus KSM/Swing Applikation Stand
 	22.02.2011}]{files/ksm-example.xml}\label{ksmswingdata}
 
-Für das KSM/Swing Datenform existiert ein XML-Schema in der Ausarbeitung der
+Für das KSM/Swing Datenformat existiert ein XML-Schema in der Ausarbeitung der
 Studienarbeit von Friedhelm Wolf \cite{wolf05} in Anhang 4. Es wurde aber in den
 folgenden Studienarbeiten nicht mehr weiter gepflegt und ist daher vermutlich
 nicht mehr gültig.
@@ -346,19 +346,19 @@ Weiterhin scheinen die Konventionen beim Entwurf dieses Formates (oder
 ,,Schema'') eher beliebig gewesen zu sein.
 Dies fällt als erstes auf bei der Benennung der der Eigenschaftsnamen (Tags), wo
 \texttt{CamelCase} (,,Microsoft Stil''), \texttt{javaStilArt} und
-underline\_stil wild gemischt werden. Die Benamung verwendet teils einen
-Typ-Prefix (\texttt{sIconPath}), teils auch nicht.
+\texttt{underline\_stil} wild gemischt werden. Die Benamung verwendet teils
+einen Typ-Prefix (\texttt{sIconPath}), teils auch nicht.
 
 Die Ein- und Ausgabe erfolgt in KSM/Swing mithilfe der Java-Bibliothek
-\textit{com.machinedialog}. Von Seiten der Projektbetreuung wurde geäußert, dass
-es gewünscht ist diese alte Bibliothek nicht mehr weiter zu verwenden. Zu den
+\textit{com.\-machine\-dialog}. Von Seiten der Projektbetreuung wurde geäußert,
+dass es gewünscht ist diese alte Bibliothek nicht mehr weiter zu verwenden. Zu den
 genauen Gründen sei auf die Studienarbeit\,\oldstylenums{1} von Tobias Dreher
 verwiesen \cite[S. 24]{dreher10}.
 
 Die fehlende Dokumentation und der anscheinend unstrukturierte Entwurf sprachen
 ebenfalls gegen die Weiterverwendung dieses Datenformates.
 In Sicht zur Zukunft ist das Format ungeignet, weil es nicht erlaubt, dass
-zusätzliche Eigenschaften rückwärtskompatibel abzubilden.
+zusätzliche Eigenschaften rückwärtskompatibel abgebildet werden.
 
 Weiterhin ist es ist nicht (mehr) durch ein XML-Schema gestützt und es wurde im
 Laufe der Entwicklung mehrmals beliebig verändert. Es ist nicht dokumentiert und
@@ -370,7 +370,7 @@ Wie an diesen beiden Beispielen zu sehen ist, bietet das XML-Format aus der
 Studienarbeit~1 nicht das Ausdrucksvermögen des KSM/Swing Format. Letzteres ist
 jedoch ungeeignet zur Nutzung in einer neuen KSM RCP-Applikation.
 
-Daher lag es nahe ein Format zu entwerfen welche sowohl von KSM/Swing mithilfe
+Daher lag es nahe ein Format zu entwerfen, welches sowohl von KSM/Swing mithilfe
 einer sauberen neuen Import/Export Infrastruktur als auch in der RCP-Anwendung
 genutzt werden kann. Es wurde hierbei ein Ansatz gewählt der sowohl Knoten,
 Gruppen von Knoten (auch bekannt als ,,Hirarchien'') als auch gerichtete
@@ -378,18 +378,18 @@ Verbindungen zu einem anderen Knoten abbilden kann. Alle drei Objekte können
 durch Eigenschaften dynamisch, nicht schema-gebunden mit Informationen
 angereichert werden.
 
-\par
-\begingroup
-\leftskip=1.5cm % ggf. verstellen
-\noindent Die Implementierung des neuen Datenformat in \textbf{KSM/Swing} wurde
-von Tobias Dreher vorgenommen. Siehe dazu seine Studienarbeit \cite{dreher11}.
-\par
+\par \begingroup \leftskip=1.5cm % ggf. verstellen
+\noindent
+
+Die Implementierung des Exports in das neue Datenformat in \textbf{KSM/Swing}
+wurde von Tobias Dreher vorgenommen. Siehe dazu seine Studienarbeit
+\cite{dreher11}. \par
+
 \endgroup
 
-
-Zu festen Standardisierung wurde ein XML-Schema erstellt woraus wiederum mittels
-des XML-Schema-Compiler (xjc) von JAXB Java-Klassen erzeugt werden die mit
-weiteren, handgeschrieben Klassen eine Bibliothek zur Abbildung von
+Zu festen Standardisierung wurde ein XML-Schema erstellt, woraus wiederum
+mittels des XML-Schema-Compiler (xjc) von JAXB Java-Klassen erzeugt werden, die
+mit weiteren, handgeschrieben Klassen eine Bibliothek zur Abbildung von
 KSM-Diagrammen im Speicher sowie Funktionen zum Laden und Speichern bietet (Abb.
 \ref{fig:class-diagram-xmlschema}). Diese kann sowohl von KSM/RCP als auch
 beliebigen Java-Anwendungen verwendet werden.
@@ -402,9 +402,9 @@ Model-Klasse}
 \label{fig:class-diagram-xmlschema}
 \end{figure}
 
-Die Datenmodell Bibliothek (Name \texttt{de.\-dhbw.\-horb.\-ksm.\-xmlschema})
-ist als Eclipse-Project angelegt kann jedoch auch nur mit Apache-Ant verwaltet
-werden (ist somit Netbeans kompatibel). Das Projektverzeichnis enthält weiterhin
+Die Datenmodell Bibliothek (Projektname:
+\texttt{ksm-model}) ist als Eclipse-Project angelegt, kann jedoch auch nur mit
+Apache-Ant verwaltet werden (ist somit Netbeans kompatibel). Das Projektverzeichnis enthält weiterhin
 umfassende Unit-Tests, teils im Beaviour-Driven Stil mithilfe der Bibliothek
 \textit{mockito}.
 
@@ -458,20 +458,21 @@ Das \texttt{\ldots qksm}-Projekt ist als Eclipse-Projekt vom Typ
 ,,Plugin-Fragment'' abgelegt. Das bedeutet, es hängt direkt vom KSM-Core Plugin
 als Host-Plugin ab und ist kein eigenständiges (OSGi-)Bundle. Es wird wird beim
 Start mit dem Host-Plugin vereinigt. Diese vorgehensweise eignet sich um ein
-Plugin ohne es zu verändern nachträglich um Features wie z.B.
-Internationalisierung oder plattformabhängigen Code zu erweitern.
+Plugin ohne es zu verändern nachträglich um Features, wie z.B.
+Internationalisierung oder plattformabhängigen Code, zu erweitern.
 
 Ein Fragment Projekt unterscheidet sich von einem Plugin Projekt in weiteren
-Punkten. Da es kein eigenständiges Bundle ist, besitzt keine Activator-Klasse.
-Die Datei zur Beschreibung der Extensions heißt \texttt{fragment.xml} anstatt
-\texttt{plugin.xml}. In \texttt{META-INF/MANIFEST.MF} wird daher kein Activator
-deklariert - jedoch mit \texttt{Frag\-ment-Host} das zu erweiternde Plugin.
+Punkten. Da es kein eigenständiges Bundle ist, besitzt es keine
+Activator-Klasse. Die Datei zur Beschreibung der Extensions heißt
+\texttt{fragment.xml} anstatt \texttt{plugin.xml}. In
+\texttt{META-INF/MANIFEST.MF} wird daher kein Activator deklariert - jedoch mit
+\texttt{Frag\-ment-Host} das zu erweiternde Plugin.
 
 Das \texttt{\ldots model} Projekt wurde durch den Eclipse Assistenten ,,Plug-In
 from existing JAR'' erstellt. Es enthält die \texttt{.class} Dateien aus dem JAR
 das im Projekt \texttt{ksm-model} durch ant erzeugt wird. Die zukünftige
-aktualisierung kann einfach dadurch erfolgen, dass die Class-Files von Hand in
-das \texttt{\ldots model} Projekt kopiert werden. Dadurch dass man auf diesen
+Aktualisierung kann einfach dadurch erfolgen, dass die Class-Files von Hand in
+das \texttt{\ldots model} Projekt kopiert werden. Dadurch dass man auf diesem
 Weg das \texttt{ksm-model} Projekt als OSGi Bundle zur Verfügung hat können
 KSM/RCP-erweiternde Plugin dieses einbinden. Alternativ wäre es möglich gewesen
 die \texttt{.jar}-Datei aus \texttt{ksm-model} in das \texttt{\ldots
@@ -493,7 +494,7 @@ Einstiegspunkt in die Ausführung. Diese implementiert das Interface
 das grundlegende Aussehen mithilfe von Perspektiven und anhand einem
 \texttt{Work\-bench\-Window\-Advisor} steuert \cite{vogelrcp}.
 
-In KSM/RCP ist im Kern-RCP Plugin die gesamte KSM-Editierfunktionalität
+Im \texttt{\ldots ksm.core} Plugin ist die gesamte KSM-Editierfunktionalität
 enthalten. Dazu gehört der GEF-basierte Editor, das Outline und die
 Projektansicht.
 
@@ -510,14 +511,15 @@ Projektansicht.
 Der mit dem Graphical Editing Framework (GEF) umgesetzte Editor ist teil des
 \texttt{\ldots ksm.\-core} Plugin-Projekt. GEF geht von einem existierenden
 Datenmodell aus welches hier durch das Plugin-Project \texttt{\ldots ksm.model}
-anstelle von \texttt{ksm-model} zur Verfügung gestellt wird \cite{gef1}.
+anstelle von \texttt{ksm-model} zur Verfügung gestellt wird.
 
 Bei der ,,Initialisierung'' eines GEF-Editors wird dem Editor eine Factory
 zugewiesen die für die Objekte/verschiedenen Typen des Datenmodells
 GEF-EditParts erzeugen kann
-(\texttt{Diagram\-Editor\-\#configureGraphicalViewer} (Abb. \ref{fig:model}).
+(\texttt{Diagram\-Editor\-\#configureGraphicalViewer}, Abb. \ref{fig:model})
+\cite{gef1}.
 
-Anschliessend wird des Datenmodell zugewiesen
+Anschliessend wird das Datenmodell zugewiesen
 (\texttt{DiagramEditor\-\#initialize\-Graph\-ical\-Viewer}). Der GEF-Editor ruft
 nun mit dem ,,Parent''-Objekt des Datenmodells die \texttt{Part\-Factory} auf
 und erhält das entsprechende EditPart. Der weitere Abstieg in der Hirarchie des
@@ -556,8 +558,8 @@ Alle Manipulationen des Datenmodells werden durch sogenannte \texttt{Commands}
 beschrieben. Abbildung \ref{fig:commands} zeigt die Basisklasse und abgeleitete
 Klassen die Manipulationen des \texttt{Node}-Typ beschreiben.
 
-Commands implentieren jeweils die Durchführung der Manipulation als auch das
-Rückgängig machen. Durch GEF werden die Commands bei Anwendung auf einem Stack
+Commands implementieren jeweils die Durchführung der Manipulation als auch das
+rückgängig Machen. Durch GEF werden die Commands bei Anwendung auf einem Stack
 abgelegt wodurch das klassische Undo/Redo ermöglicht wird.
 
 Dieses Pattern verhindert weiterhin, dass das Datenmodell an beliebigen
@@ -583,8 +585,9 @@ Das ,,Simulation'' Project \texttt{\ldots ksm.simulator} zeigt als Prototyp wie
 es möglich ist, Daten die im Editor bearbeitet werden live mit einem Chart
 auszuwerten.
 
-Der Chart ist als View implementiert. Diese View besitzt für mehrere Zustände
-für alle KSM-Editoren die geöffnet sind und wird entsprechend aktualisiert.
+Der Chart ist als View implementiert. Die View besitzt mehrere
+Zustände/Ansichten für alle KSM-Editoren die geöffnet sind und es wird immer die
+zum aktuell fokussierten Editor passende dargestellt.
 
 Für den Linechart wird die Bibliothek SWT-Chart verwendet die dem Projekt
 beigelegt ist. Sie wird im OSGi-Manifest angegeben:
@@ -609,11 +612,12 @@ des KSM-Nodes auf die Y-Achse auf und die KSM-Node-Beschriftung auf die X-Achse.
 \section{Property Editor}
 Damit ein Model für die Standard Eclipse-Properties-View nötigen Informationen
 bereitstellt muss eine \texttt{Prop\-erty\-Source} bereitgestellt werden. Dies geschieht im
-einfachen Fall indem die Model-Klasse \texttt{IProp\-erty\-Source\-Provider} implementiert.
+einfachen Fall indem die Model-Klasse \texttt{IProp\-erty\-Source\-Provider}
+implementiert wird.
 
 Ist dies nicht der Fall fragt die Properties-View das \texttt{EditPart} über
-\texttt{getAdapter\-(IProp\-erty\-Source\-Provider.class)} nach einem Objekt das
-die Properties des Model beschreibt. Dieser Ansatz wurde gewählt, da die
+\texttt{getAdapter\-(IProp\-erty\-Source\-Provider.class)} nach einem Objekt,
+das die Properties des Model beschreibt. Dieser Ansatz wurde gewählt, da die
 Klassen des Models nicht angepasst werden konnten. Dies ist in einer
 Designschwäche der Model-Bibliothek begründet. Es ist noch nicht möglich eigene,
 abgeleitete Klassen für das Model zu verwenden.
@@ -625,7 +629,7 @@ Klassen zur Verwaltung der Properties.
 
 \begin{figure}[mt]
 \centering
-\includegraphics[width=0.7\textwidth]{images/ext-property-descriptors.PNG}
+\includegraphics[width=0.5\textwidth]{images/ext-property-descriptors.PNG}
 \caption{Klassen des Extension Point für Property Deskriptoren}
 \label{fig:ext-property-descriptors}
 \end{figure}
@@ -653,15 +657,15 @@ Extensions registriert wurden.
 
 Extensions sehen so aus, dass eine von
 \texttt{Abstract\-Property\-Descriptor\-Advisor} abgeleitete Klasse (im
-Beispiel sind schon BaseNode[Group]PropertyAdvisor dargestellt die die
+Beispiel sind schon BaseNode[Group]PropertyAdvisor dargestellt, die die
 Manipulation der grundlegenden Eigenschaften Farbe und Beschriftung erlauben)
 angegeben wird die Descriptoren für Eigenschaften des Model-Objekt erstellt.
 
 Abbildung \ref{fig:property-declaration-extensionpoint} zeigt wie der Extension
 Point deklariert wurde. Das gezeigte GUI ist eine Maske für eine XML-Datei die
-im Prinzip ein XML-Schema für das XML ist mit dem der Extension-Point
-genutzt werden kann. In diesem Fall können auf den Extension-Point beliebig
-viele ,,advisor'' Elemente angelegt werden die auf eine von
+im Prinzip ein XML-Schema für das XML ist mit dem der Extension-Point von
+Client-Plugins konfiguriert wird. Auf diesen Extension-Point können beliebig
+viele ,,advisor'' Elemente angelegt werden, die auf eine von
 \texttt{Abstract\-Property\-Descriptor\-Advisor} abgeleitete Klasse zeigen und
 ein Attribut \texttt{type} haben (Abb.
 \ref{fig:eclipse-property-usage-extensionpoint}).
@@ -673,9 +677,8 @@ Funktionalitäten: [Editoren für] ,Edge Values' – Kanteneigenschaften [..]
 ,Node Values' – Knoteneigenschaften'' (Studienarbeit Christian Riess \cite[S.
 24]{riess03}).
 
-Im Rahmen dieser Studienarbeit wurde ein Table-Editor prototypisch entworfen
-welcher Knoteneigenschaften manipulieren kann. Abbildung \ref{fig:table-editor}
-zeigt die dabei eingeführten Neuigkeiten.
+Abbildung \ref{fig:table-editor} zeigt den Table-Editor der im Rahmen dieser
+Studienarbeit prototypisch entworfen wurde.
 
 \begin{figure}[ht]
 \centering
@@ -685,18 +688,17 @@ zeigt die dabei eingeführten Neuigkeiten.
 \end{figure}
 
 Rot markiert ist die neue View des ,,Table-Editor''. Sie wird durch den Aufruf
-der Table-Editor Perspektive aktiviert (Button ebenfalls rot markiert).
+der Table-Editor Perspektive aktiviert (Button ist ebenfalls rot markiert).
 
 Bei der View handelt es sich \texttt{PageBookView}. Sie instanziert für jeden
 offenen Editor einen Table-Editor. Es wird jeweils der zu dem fokussierten
 Diagramm-Editor passende Table-Editor angezeigt. Die Implentierung folgt dabei
 dem Eclipse-Standard wie er auch in Outline verwendet wird.
 
-Änderungen am Diagramm übernimmt der Table-Editor einfacherweise indem er auf
-alle Node/NodeGroup Objekte listener registriert sondern er beobachtet den
-Command-Stack des Editors. Dies funktioniert nur solange wie keine weiteren
-Änderungen am Modell vorgenommen werden die kein Command im Diagramm-Editor
-Command-Stack erzeugen.
+Änderungen am Diagramm übernimmt der Table-Editor einfacherweise nicht indem er
+auf alle Node/NodeGroup Objekte Listener registriert, sondern er beobachtet den
+Command-Stack des Editors. Dies funktioniert nur solange alle weiteren
+Änderungen am Modell Command-Objekte im Diagramm-Editor Command-Stack erzeugen.
 
 Der Table-Editor nutzt im Prototyp noch keine Undo-/Redo-Funktionalität sondern
 arbeitet ,,dreckig'' direkt am Datenmodell.
@@ -713,7 +715,7 @@ werden.
 Weiterhin werden Vorschläge zur stärken Integration von Eclipse-Tools in das
 Studium aus der Sicht eines Studenten vorgestellt.
 
-Es bei dieser Studienarbeit mit dem Eclipse \oldstylenums{3}.6 / Helios Package
+Es bei dieser Studienarbeit mit dem Eclipse \oldstylenums{3}.6/Helios Package
 ,,for RCP and RAP Developers'' gearbeitet.
 
 \section{Hilfsmittel}
@@ -740,10 +742,10 @@ Klassen ist meist sehr hilfreich.
 Zum Einstieg ist das RCP Tutorial von Lars Vogel empfehlenswert \cite{vogelrcp}.
 Zu den Grundlagen von GEF sind die Folien eines EclipseCon Tutorials interessant
 \cite{gefslides}. Tiefergehende jedoch teils veraltete Informationen bietet
-das IBM Redbook zu diesem Thema \cite{gefredbook}.
+das IBM RedBook zu GEF \cite{gefredbook}.
 
 Einen allgemeinen Überblick und guten Enstieg in die Eclipse Plugin Entwicklung
-(weniger RCP) findet sich in der Seminararbeit im Kurs Software-Engineering
+findet sich in der Seminararbeit im Kurs Software-Engineering
 2011/\textsc{TIT2008} von Felix Kienzle \cite{kienzle11}.
 
 Da Eclipse~RCP kein monolithisches Produkt ist sondern sich aus einzelnen
@@ -840,22 +842,24 @@ it2008 Jahrgang nicht mehr zugänglich.
 Die Veröffentlichung - bzw. eine sauber strukturierte Ablage - ist ein Baustein
 im Prozess der Zustand ändert.
 
-In Hinblick auf eine Open-Source Entwicklung wird das private und sich als
-unzuverlässig herausgestellte Subversion-Repository gegen ein Git-Repository
-getauscht. Die Wahl für Git begründet sich durch die starke Präsenz im
-Open-Source Bereich, besonders auch in Eclipse nahen Projekten und dadurch, dass
-bereits im Kurs Software-Engineering mit Git gearbeitet wurde. Es wird die
-ebenfalls im Studium bereits verwendete Plattform \texttt{github.com} verwendet.
-Dort stehen weitere, integrierte Funktionen wie Messaging, Issue-Tracker und
-Wiki zur Verfügung. Diese wurden jedoch im Rahmen dieses Projektes noch nicht
-eingesetzt.
+In Hinblick auf eine Open-Source Entwicklung wird SVN Repository an der
+Hochschule, welches sich zeitweise als unzuverlässig herausstellte, gegen ein
+Git-Repository getauscht.
+
+Die Wahl für Git begründet sich, neben der Abkehr von SVN aus allgemeinen
+Gründen, gegenüber konkurrenzfähigen Versionskontrollsystemen durch die
+starke Präsenz im Open-Source Bereich, besonders auch in Eclipse nahen Projekten
+und dadurch, dass bereits im Kurs Software-Engineering mit Git gearbeitet wurde.
+Es wird die ebenfalls im Studium bereits verwendete Plattform
+\texttt{github.com} verwendet. Dort stehen weitere, integrierte Funktionen wie
+Messaging, Issue-Tracker und Wiki zur Verfügung. Diese wurden jedoch im Rahmen
+dieses Projektes noch nicht eingesetzt.
 
 Die Quellen des Eclipse basierten KSM/RCP werden unter dem Github
 Organization-Account \textit{dhbw-horb}
-({\small\url{https://dhbw-horb.github.com}}) veröffentlicht bzw. hinterlegt
-werden. Ebenso wird ein Verweis auf die KSM-Website hinterlegt. Zukünftige
-Entwickler erhalten Zugriff, indem sie Mitglied dieses Organization-Account
-werden.
+({\small\url{https://dhbw-horb.github.com}}) veröffentlicht bzw. hinterlegt.
+Ebenso wird ein Verweis auf die KSM-Website hinterlegt. Zukünftige Entwickler
+erhalten Zugriff, indem sie Mitglied dieses Organization-Account werden.
 
 Zwar wird der Quellcode möglicherweise veröffentlicht - von Open-Source im Sinne
 der allgemeinen Bedeutung ist allerdings nicht zu sprechen, da keine Open-Source
@@ -882,19 +886,19 @@ Prozessgrößen (QKSM) zu verwenden ohne die ,,Hauptapplikation'' verändern zu
 müssen was im schlimmstenfall wieder zu einer Zerspaltung der Projekte führen
 könnte.
 
-Die grafische Darstellung von Hirarchien in KSM/RCP unterscheidet sich von der
-Darstellung im Swing-basierten KSM. Meiner Ansicht erfordert das Thema
+Die grafische Darstellung von Hirarchien in KSM/RCP unterscheidet sich optisch
+von der Darstellung im Swing-basierten KSM. Meiner Ansicht erfordert das Thema
 \textit{Hirarchien} eine radikale Lösung z.B. durch die Ersetzung von Hirarchien
 durch ,,Tags'' mit denen Knoten gruppiert werden können. Probleme wie ,,Phantom
-Knoten''\cite[S. 49]{pustelnik10} gibt es jedoch in KSM/RCP da die
-Daten im Modell auch echt hirarchisch abgelegt sind.
+Knoten''\cite[S. 49]{pustelnik10} gibt es jedoch in KSM/RCP da die Daten im
+Modell auch echt hirarchisch abgelegt sind.
 
 Im Bereich des grafischen Editors könnte möglicherweise bald unter Verwendung
-des Eclipse Graphiti Project welches auf GEF aufbaut einiges vereinfacht werden.
-Weiterhin entfällt bei Beendung der KSM/Swing Entwicklung der Grund, das
+des Eclipse Graphiti Project, welches auf GEF aufbaut, um einiges vereinfacht
+werden. Weiterhin entfällt bei beendung der KSM/Swing Entwicklung der Grund, das
 Datenmodell unabhängig von Eclipse-Bibliotheken zu halten und das Datenmodell
-könnte möglicherweise besser mit den Eclipse Modeling Werkzeugen erstellt
-werden.
+könnte einfacher und professioneller mit den Eclipse Modeling Werkzeugen
+erstellt werden.
 
 %% Table-Editor
 Mit dem \emph{Table-Editor} Entwurf wurde gezeigt, dass die aus KSM/Swing
@@ -913,7 +917,7 @@ des Simulierens ist nicht implementiert.
 
 In der \emph{Datenmodell} Library \texttt{ksm-model} sollte es möglich sein,
 Vererbung zu Nutzen um die Model-Klassen für den Einsatzbereich zu erweitern. Hierzu
-müsste zur Instantierung neuer Model-Objekte jedoch ein Factory-Pattern
+müsste zur Instanzierung neuer Model-Objekte ein Factory-Pattern
 eingesetzt werden was nicht der Fall ist.
 
 Auch in der Datenmodell Library wurde der Ansatz gewählt, dass sich auf alle
