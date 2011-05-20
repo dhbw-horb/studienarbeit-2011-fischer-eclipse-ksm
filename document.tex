@@ -690,10 +690,11 @@ Studienarbeit prototypisch entworfen wurde.
 Rot markiert ist die neue View des ,,Table-Editor''. Sie wird durch den Aufruf
 der Table-Editor Perspektive aktiviert (Button ist ebenfalls rot markiert).
 
-Bei der View handelt es sich \texttt{PageBookView}. Sie instanziert für jeden
-offenen Editor einen Table-Editor. Es wird jeweils der zu dem fokussierten
-Diagramm-Editor passende Table-Editor angezeigt. Die Implentierung folgt dabei
-dem Eclipse-Standard wie er auch in Outline verwendet wird.
+Bei der View handelt es sich um eine von abgeleitete Klasse
+\texttt{PageBookView}. Sie instanziert für jeden offenen Editor einen
+Table-Editor. Es wird jeweils der zu dem fokussierten Diagramm-Editor passende
+Table-Editor angezeigt. Die Implentierung folgt dabei dem Eclipse-Standard wie
+er auch in Outline verwendet wird.
 
 Änderungen am Diagramm übernimmt der Table-Editor einfacherweise nicht indem er
 auf alle Node/NodeGroup Objekte Listener registriert, sondern er beobachtet den
