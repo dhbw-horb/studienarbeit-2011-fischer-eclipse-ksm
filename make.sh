@@ -7,10 +7,22 @@ cat > index.html <<"HTML"
 <html>
 <head>
 <title>Studienarbeit 2011 KSM Eclipse-RCP</title>
+<meta charset='utf-8'>
 <style>
 body {
 text-align: center;
-background-color: efefef;
+background-color: dfdfdf;
+}
+#bar {
+border: 1px solid gray;
+background-color: lightGray;
+width: 30%;
+position: fixed;
+top: 4px;
+left: 35%;
+}
+a {
+    text-decoration: none;
 }
 </style>
 <script src="js/jquery-1.6.min.js" type="text/javascript"></script>
@@ -22,7 +34,11 @@ background-color: efefef;
 </script>
 </head>
 <body>
-<a href="document.pdf">Download als PDF</a>
+<div id="bar">
+    <a href="http://github.com/dhbw-horb/ksm-rcp">KSM Projektrepository</a>
+     • 
+    <a href="http://www.ba-horb.de/~ksm">KSM Website</a>
+</div>
 <br />
 <br />
 HTML
@@ -40,3 +56,6 @@ cat >> index.html <<HTML
 </body>
 </html>
 HTML
+
+
+rm document.pdf
